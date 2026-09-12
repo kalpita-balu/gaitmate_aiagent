@@ -1,0 +1,12 @@
+{
+  "fall_recall": 1.0,
+  "test_sessions": 90,
+  "fall_test_sessions": 30,
+  "fall_false_negatives": 0,
+  "prediction_counts": {
+    "normal": 30,
+    "instability": 30,
+    "fall": 30
+  },
+  "model_limitations": "Synthetic-data result only. Do not use for clinical or emergency decisions."
+}

@@ -1,0 +1,16 @@
+{
+  "model_type": "transparent_imu_threshold_baseline",
+  "model_version": "week1-fallback-1",
+  "primary_features": [
+    "acc_mag_max",
+    "gyro_mag_max"
+  ],
+  "fall_thresholds": {
+    "acc_mag_max": 18.381419877982825,
+    "gyro_mag_max": 344.59369867155806
+  },
+  "instability_thresholds": {
+    "gyro_mag_max": 78.95415297566522
+  },
+  "notes": "Development-only baseline. Scores are threshold strengths, not probabilities."
+}
