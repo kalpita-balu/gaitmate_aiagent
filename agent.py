@@ -6,7 +6,7 @@ from pathlib import Path
 import json
 import pandas as pd
 
-from src.features import extract_features
+from lightweight_ml_model.src.features import extract_features
 
 
 class GaitMateAgent:
@@ -17,7 +17,7 @@ class GaitMateAgent:
     """
 
     def __init__(self, model_path: Path | None = None) -> None:
-        path = model_path or Path(__file__).resolve().parent / "artifacts" / "fall_threshold_model.json"
+        path = model_path or Path(__file__).resolve().parent / "lightweight_ml_model" / "artifacts" / "fall_threshold_model.json"
         self.model = json.loads(path.read_text(encoding="utf-8"))
         self.primary_features = self.model["primary_features"]
 
