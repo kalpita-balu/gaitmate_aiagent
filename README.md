@@ -55,3 +55,29 @@ using the Week 1 threshold model, and debounced escalation of anomalies.
 python3 stream_simulator.py
 ```
 
+## Week 3 UI prototype
+
+`index.html` provides a local, branded patient-facing prototype with calibration, simulated sensor status, event logging, symptom check-ins, progress, care-team, and exercise flows. Values and guidance remain simulated and non-clinical.
+
+Run the UI locally:
+
+```bash
+python3 -m http.server 8000
+```
+
+Open `http://127.0.0.1:8000` in a browser.
+
+### Replay bridge
+
+`stream_replay.py` replays a labeled IMU session through `GaitMateAgent` and writes the latest confirmed event to a local `ui_event.json` file. The browser polls this file and updates the dashboard. The event file stays untracked because it is runtime output.
+
+```bash
+python3 stream_replay.py --session fall_001
+```
+
+For a future continuous stream, increase the debounce setting:
+
+```bash
+python3 stream_replay.py --confirm 5
+```
+
